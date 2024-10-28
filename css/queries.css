@@ -201,6 +201,10 @@
     display: grid;
   } */
 
+  .logo {
+    width: 90%;
+  }
+
   .diets {
     grid-column: 1 / -1;
     justify-self: center;
