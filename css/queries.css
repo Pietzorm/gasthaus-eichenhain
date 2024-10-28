@@ -270,6 +270,10 @@
     padding: 2.4rem 1.6rem;
   }
 
+  .logo {
+    width: 75% !important;
+  }
+
   .section-hero {
     padding: 2.4rem 0 6.4rem 0;
     /* display: grid; */
