@@ -271,7 +271,11 @@
   }
 
   .logo {
-    width: 75% !important;
+    width: 75%;
+  }
+
+  footer .logo {
+    width: 100%;
   }
 
   .section-hero {
