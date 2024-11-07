@@ -55,14 +55,11 @@
   .testimonials-container {
     padding: 9.6rem 3.2rem;
   }
-
-
 }
 
 /*************************/
 /* BELOW 944px (Tablets) */
 /*************************/
-
 
 @media (max-width: 59em) {
   html {
@@ -73,6 +70,10 @@
   .heading-primary,
   #ueber-uns {
     padding-top: 32rem;
+  }
+
+  .alert {
+    max-width: 300px;
   }
 
   /* .section-hero {
@@ -186,7 +187,6 @@
 /*********************************/
 
 @media (max-width: 44em) {
-
   .grid--3-cols,
   .grid--4-cols {
     grid-template-columns: repeat(2, 1fr);
@@ -221,14 +221,15 @@
   .grid--footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center; 
+    justify-items: center;
   }
-  
-  .logo-col, .address-col  {
-    grid-column: span 4; 
+
+  .logo-col,
+  .address-col {
+    grid-column: span 4;
     justify-self: center;
   }
-  
+
   footer .copyright {
     text-align: center;
     margin-bottom: 4rem;
