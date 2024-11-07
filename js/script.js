@@ -131,8 +131,32 @@ function eventPrices() {
 // });
 
 function closeAlert() {
-  const alertBox = document.getElementById('free-dates-alert');
-  alertBox.style.display = 'none'; // Hide the alert box
+  const alertBox = document.getElementById("free-dates-alert");
+  alertBox.style.display = "none"; // Hide the alert box
 }
 
+/////////////////////////////
+// Enlarge Images on Click //
+/////////////////////////////
 
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".close");
+
+// Add click event to images with class 'enlargeable'
+document.querySelectorAll(".enlargeable").forEach((img) => {
+  img.addEventListener("click", function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  });
+});
+
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+};
+
+modal.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
