@@ -99,6 +99,10 @@
   cursor: pointer;
 }
 
+.enlargeable {
+  cursor: pointer;
+}
+
 /**************/
 /* NAVIGATION */
 /**************/
