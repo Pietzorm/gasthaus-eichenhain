@@ -259,6 +259,11 @@
 /************************/
 
 @media (max-width: 34em) {
+
+  .step-img {
+    max-width: 95%;
+  }
+
   .grid {
     row-gap: 4.8rem;
   }
