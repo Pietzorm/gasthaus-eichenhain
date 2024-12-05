@@ -73,7 +73,7 @@
   }
 
   .alert {
-    max-width: 300px;
+    max-width: 500px;
   }
 
   /* .section-hero {
@@ -192,6 +192,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .alert {
+    max-width: 400px;
+  }
+
   .heading-primary,
   #ueber-uns {
     padding-top: 19rem;
@@ -273,6 +277,12 @@
 
   .logo {
     width: 75%;
+  }
+
+  .alert {
+    max-width: 300px;
+    top: auto;
+    bottom: 1rem;
   }
 
   footer .logo {
