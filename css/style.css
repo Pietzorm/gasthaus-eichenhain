@@ -638,6 +638,6 @@
   color: white;
 }
 
-.additional-info {
+#cookie-banner a.additional-info {
   outline: none;
 }

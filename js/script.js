@@ -164,6 +164,10 @@ modal.onclick = function (event) {
 /////////////
 // Cookies //
 /////////////
+document.getElementById('cookie-info-link').addEventListener('click', function (event) {
+  event.preventDefault();
+  window.open(this.href, '_blank');
+});
 
 function checkCookieConsent() {
   return document.cookie.includes("cookies-accepted=true");

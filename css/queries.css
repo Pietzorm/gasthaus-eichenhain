@@ -351,6 +351,21 @@
     height: 32rem;
     grid-row: 1;
   }
+
+  #cookie-banner {
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: stretch;  /* Stretch the buttons to full width */
+    text-align: center;    /* Center the text in the buttons */
+  }
+
+  #cookie-banner p {
+    margin-bottom: 1rem;
+  }
+
+  #cookie-banner button {
+    margin: 0.5rem 0;  /* Add spacing between buttons */
+    width: 100%;       /* Make buttons take up full width */
+  }
 }
 
 /*****************************/
