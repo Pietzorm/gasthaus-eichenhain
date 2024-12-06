@@ -160,3 +160,77 @@ modal.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+/////////////
+// Cookies //
+/////////////
+
+function checkCookieConsent() {
+  return document.cookie.includes("cookies-accepted=true");
+}
+
+function removeMap() {
+  const mapContainer = document.getElementById("map-placeholder");
+  mapContainer.innerHTML = `<img src="img/map.avif" loading="lazy" class="step-img" alt="Map placeholder" />`;
+}
+
+function loadMap() {
+  const mapContainer = document.getElementById("map-placeholder");
+  mapContainer.innerHTML = `
+    <iframe width="100%" height="300"
+      src="https://maps.google.de/maps?hl=de&q=%20Staffelder+Str.+13a%20Kremmen&t=&z=14&ie=utf8&iwloc=b&output=embed"
+      frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+      style="height:300px;width:100%; overflow: hidden;">
+    </iframe>`;
+}
+
+// Event: Accept Cookies
+document.getElementById('accept-cookies').addEventListener('click', function () {
+  document.cookie = "cookies-accepted=true; path=/; max-age=31536000"; // Set the cookie for 1 year
+  document.getElementById("cookie-banner").style.display = "none";
+  loadMap();
+
+  adjustAlertPosition(); // Adjust the position of the alert box
+});
+
+// Event: Deny Cookies
+document.getElementById('deny-cookies').addEventListener('click', function () {
+  document.cookie = "cookies-accepted=false; path=/; max-age=31536000"; // Set the cookie for 1 year
+  document.getElementById("cookie-banner").style.display = "none";
+  removeMap();
+
+  adjustAlertPosition(); // Adjust the position of the alert box
+});
+
+// Adjust the position of the alert box on mobile screens
+function adjustAlertPosition() {
+  const cookieBanner = document.getElementById("cookie-banner");
+  const alertBox = document.getElementById("free-dates-alert");
+
+  if (window.matchMedia("(max-width: 34em)").matches) {
+    // Only adjust position if the screen width is <= 34em
+    if (cookieBanner && alertBox) {
+      const bannerHeight = cookieBanner.offsetHeight;
+      const isBannerVisible = cookieBanner.style.visibility !== "hidden";
+
+      if (isBannerVisible) {
+        alertBox.style.bottom = `${bannerHeight + 16}px`; // 1rem = 16px
+      } else {
+        alertBox.style.bottom = "1rem"; // Return to bottom after banner is hidden
+      }
+    }
+  }
+}
+
+// Initial load logic
+window.onload = function () {
+  if (checkCookieConsent()) {
+    document.getElementById("cookie-banner").style.visibility = "hidden"; 
+    loadMap(); 
+  } else {
+    document.getElementById("cookie-banner").style.visibility = "visible"; 
+    removeMap(); 
+  }
+
+  adjustAlertPosition(); 
+};

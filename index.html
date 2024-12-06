@@ -35,6 +35,17 @@
 </head>
 
 <body>
+
+  <!------------------->
+  <!-- Cookie Banner -->
+  <!------------------->
+
+  <div id="cookie-banner">
+    <p>Diese Seite benötigt Ihre Zustimmung zur Verwendung von Cookies, um Google Maps korrekt anzuzeigen. Mit "Zustimmen" erlauben Sie uns, Cookies zu setzen. Weitere Informationen finden Sie <a href="cookie-info.html" class="additional-info">hier</a>.</p>
+    <button id="accept-cookies" class="accept" onclick="acceptCookies()">Zustimmen</button>
+    <button id="deny-cookies" class="deny" onclick="denyCookies()">Ablehnen</button>
+  </div>
+
   <!----------->
   <!-- ALERT -->
   <!----------->
@@ -144,14 +155,8 @@
           </p>
         </div>
 
-        <div class="step-img-box" style='height:300px;width:100%;'>
-          <iframe width="" height="300"
-            src="https://maps.google.de/maps?hl=de&q=%20Staffelder+Str.+13a%20Kremmen&t=&z=14&ie=utf8&iwloc=b&output=embed"
-            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-            style='height:300px;width:100%; overflow: hidden;'>
-            Von <a href="https://www.checkpoll.de" style="font-size:10px;" title="Checkpoll"
-              target="_blank">Checkpoll</a>
-          </iframe>
+        <div class="step-img-box" id="map-placeholder">
+          <img src="img/map.avif" loading="lazy" class="step-img" alt="Map placeholder" />
         </div>
 
         <!-- SV FLATOW -->

@@ -425,11 +425,9 @@
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
 
-  background-image: linear-gradient(
-    to right bottom,
-    var(--tint3),
-    var(--main-color)
-  );
+  background-image: linear-gradient(to right bottom,
+      var(--tint3),
+      var(--main-color));
   overflow: hidden;
 }
 
@@ -593,4 +591,53 @@
 .footer-link:hover,
 .footer-link:active {
   color: #555;
+}
+
+/***********/
+/* Cookies */
+/***********/
+
+/* Cookie Banner Styles */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  font-size: 14px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cookie-banner p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+#cookie-banner button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+#cookie-banner button.accept {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#cookie-banner button.deny {
+  background-color: #d9534f;
+  color: white;
+}
+
+.additional-info {
+  outline: none;
 }
