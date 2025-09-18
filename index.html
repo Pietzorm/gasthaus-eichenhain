@@ -21,9 +21,9 @@
   </noscript>
 
 
-  <!-- <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/general.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/queries.css" /> -->
+  <link rel="stylesheet" href="css/queries.css" />
 
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
@@ -31,369 +31,438 @@
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   <script defer src="js/script.js"></script>
 
-      <title>Website wird gewartet</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            font-size: 100% !important;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #fb4d4d 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            line-height: 1.6;
-            padding: 1rem;
-        }
-
-        .container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            padding: 3rem 2rem;
-            text-align: center;
-            max-width: 500px;
-            width: 100%;
-            margin: 0 auto;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            min-height: auto;
-        }
-
-        .gear-container {
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .gear {
-            width: 80px;
-            height: 80px;
-            border: 4px solid #fb4d4d;
-            border-radius: 50%;
-            position: relative;
-            animation: rotate 3s linear infinite;
-        }
-
-        .gear::before,
-        .gear::after {
-            content: '';
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background: #fb4d4d;
-            border-radius: 50%;
-        }
-
-        .gear::before {
-            top: -6px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .gear::after {
-            bottom: -6px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .gear-teeth {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .gear-teeth::before,
-        .gear-teeth::after {
-            content: '';
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background: #fb4d4d;
-            border-radius: 50%;
-        }
-
-        .gear-teeth::before {
-            top: 50%;
-            left: -6px;
-            transform: translateY(-50%);
-        }
-
-        .gear-teeth::after {
-            top: 50%;
-            right: -6px;
-            transform: translateY(-50%);
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background: #fb4d4d;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1);
-            }
-            50% {
-                opacity: 0.3;
-                transform: translate(-50%, -50%) scale(1.5);
-            }
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fb4d4d, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-
-        .message {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 2rem;
-        }
-
-        .status-bar {
-            width: 100%;
-            height: 4px;
-            background: #f0f0f0;
-            border-radius: 2px;
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
-
-        .status-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #fb4d4d, #764ba2);
-            border-radius: 2px;
-            animation: progress 4s ease-in-out infinite;
-        }
-
-        @keyframes progress {
-            0% {
-                width: 0%;
-            }
-            50% {
-                width: 70%;
-            }
-            100% {
-                width: 0%;
-            }
-        }
-
-        .footer-text {
-            font-size: 0.9rem;
-            color: #888;
-            margin-top: 2rem;
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            body {
-                padding: 0.5rem;
-            }
-            
-            .container {
-                padding: 2.5rem 1.5rem;
-                border-radius: 15px;
-                max-width: 100%;
-            }
-
-            h1 {
-                font-size: 1.9rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .subtitle {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .message {
-                font-size: 0.95rem;
-                margin-bottom: 1.5rem;
-                line-height: 1.5;
-            }
-
-            .gear {
-                width: 70px;
-                height: 70px;
-            }
-
-            .gear-container {
-                margin-bottom: 2rem;
-            }
-
-            .footer-text {
-                font-size: 0.85rem;
-                margin-top: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 0.3rem;
-            }
-            
-            .container {
-                padding: 2rem 1.2rem;
-                border-radius: 12px;
-            }
-
-            h1 {
-                font-size: 1.7rem;
-                margin-bottom: 0.6rem;
-            }
-
-            .subtitle {
-                font-size: 0.95rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .message {
-                font-size: 0.9rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .gear {
-                width: 60px;
-                height: 60px;
-            }
-
-            .gear-container {
-                margin-bottom: 1.5rem;
-            }
-
-            .footer-text {
-                font-size: 0.8rem;
-                margin-top: 1.2rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .container {
-                padding: 1.5rem 1rem;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .subtitle {
-                font-size: 0.9rem;
-            }
-
-            .message {
-                font-size: 0.85rem;
-            }
-
-            .gear {
-                width: 50px;
-                height: 50px;
-            }
-        }
-
-        /* Touch-friendly interactions */
-        @media (hover: none) and (pointer: coarse) {
-            .container {
-                touch-action: manipulation;
-            }
-        }
-
-        /* Browser Compatibility */
-        .container {
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-        }
-
-        .gear {
-            -webkit-animation: rotate 3s linear infinite;
-            -moz-animation: rotate 3s linear infinite;
-            -o-animation: rotate 3s linear infinite;
-            animation: rotate 3s linear infinite;
-        }
-
-        .pulse-dot {
-            -webkit-animation: pulse 2s ease-in-out infinite;
-            -moz-animation: pulse 2s ease-in-out infinite;
-            -o-animation: pulse 2s ease-in-out infinite;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .status-progress {
-            -webkit-animation: progress 4s ease-in-out infinite;
-            -moz-animation: progress 4s ease-in-out infinite;
-            -o-animation: progress 4s ease-in-out infinite;
-            animation: progress 4s ease-in-out infinite;
-        }
-    </style>
+  <title>Gasthaus Eichenhain &mdash; Flatow</title>
 </head>
-<body>
-    <div class="container">
-        <div class="gear-container">
-            <div class="gear">
-                <div class="gear-teeth"></div>
-                <div class="pulse-dot"></div>
-            </div>
-        </div>
-        
-        <h1>Wartungsarbeiten</h1>
-        <p class="subtitle">Wir arbeiten gerade an Verbesserungen</p>
-        
-        <div class="status-bar">
-            <div class="status-progress"></div>
-        </div>
-        
-        <p class="message">
-            Unsere Website wird derzeit gewartet und aktualisiert. 
-            Wir sind bald wieder für Sie da und danken Ihnen für Ihr Verständnis.
-        </p>
-        
-        <p class="footer-text">
-            Bitte beachten Sie, dass wir während der Wartungsarbeiten auch per E-Mail vorübergehend nicht erreichbar sind.
-        </p>
 
-        <p class="footer-text">
-            <em>Ihr Gasthaus-Eichenhain Team</em>
+<body>
+
+  <!------------------->
+  <!-- Cookie Banner -->
+  <!------------------->
+
+  <div id="cookie-banner">
+    <p>Diese Seite benötigt Ihre Zustimmung zur Verwendung von Cookies, um Google Maps korrekt anzuzeigen. Mit "Zustimmen" erlauben Sie uns, Cookies zu setzen. Weitere Informationen finden Sie <a href="cookie-info.html" id="cookie-info-link" target="_blank" class="additional-info">hier</a>.</p>
+    <button id="accept-cookies" class="accept" onclick="acceptCookies()">Zustimmen</button>
+    <button id="deny-cookies" class="deny" onclick="denyCookies()">Ablehnen</button>
+  </div>
+
+  <!----------->
+  <!-- ALERT -->
+  <!----------->
+
+  <!-- <div class="alert" id="free-dates-alert">
+    <span class="close-btn" onclick="closeAlert()">&times;</span>
+    <h2>Noch freie Termine, zum Beispiel für kurzfristige Weihnachtsfeiern</h2>
+    <ul>
+      <li>Samstag<br>21. Dezember 2024</li>
+      <li><br></li>
+    </ul>
+  </div> -->
+
+  <!----------------->
+  <!-- IMAGE MODAL -->
+  <!----------------->
+
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <!------------>
+  <!-- HEADER -->
+  <!------------>
+
+  <header class="header">
+    <a href="#">
+      <img class="logo" alt="Gasthaus Eichenhain Logo" src="img/eichenhain-logo.png" />
+    </a>
+
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="#ueber-uns">Über Uns</a></li>
+        <li><a class="main-nav-link" href="#offers">Angebot</a></li>
+        <li>
+          <a class="main-nav-link" href="#testimonials">Bewertungen</a>
+        </li>
+        <li><a class="main-nav-link nav-cta" href="#cta">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <button class="btn-mobile-nav">
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+  </header>
+
+  <!---------->
+  <!-- HERO -->
+  <!---------->
+
+  <main>
+
+    <section class="section-hero">
+
+      <div class="hero">
+
+        <div class="hero-text-box">
+          <h1 class="heading-primary">
+            Feiern, Sport & Bowling in bester Atmosphäre
+          </h1>
+          <p class="hero-description">
+            Egal ob private Feiern, Fußball-Heimspiele des FC Rot-Weiß Flatow, gesellige Bowlingrunden oder besondere
+            Anlässe – bei uns ist für jeden etwas dabei. Genieße die beste Stimmung, köstliche Drinks und unvergessliche
+            Abende in unserem gemütlichen Lokal. Bei uns gibt es nicht nur Raum für Events &mdash; <em>hier entstehen
+              Erinnerungen!</em>
+          </p>
+
+          <a href="#cta" class="btn btn--full margin-right-sm">Buchen Sie noch heute</a>
+
+          <a href="#ueber-uns" class="btn btn--outline">Erfahre mehr &darr;</a>
+        </div>
+
+        <div class="hero-img-box">
+          <picture>
+            <source srcset="img/hero-min.avif" type="image/avif" />
+
+            <img src="img/hero-min.avif" class="hero-img"
+              alt="Bild des Veranstaltungsraums, der Bowlingbahn und des Lokals." />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!--------------->
+    <!-- UEBER UNS -->
+    <!--------------->
+
+    <section class="section-how" id="ueber-uns">
+      <div class="container">
+        <span class="subheading">Über uns</span>
+        <h2 class="heading-secondary">
+          Herzlich willkommen im Herzen von Flatow
+        </h2>
+      </div>
+
+      <div class="container grid grid--2-cols grid--center-v">
+        <!-- LAGE -->
+        <div class="step-text-box">
+          <p class="step-number">Lage</p>
+          <h3 class="heading-tertiary"> Flatow, 16766 Kremmen</h3>
+          <p class="step-description">
+            Unser Lokal liegt zentral in der <strong>Staffelder Straße 13 A</strong> auf dem Gelände des SV Rot-Weiß
+            Flatow. Der idyllische Ortsteil Flatow in Kremmen ist über die Landesstraßen L 16, L 17 und die A 24 bequem
+            erreichbar und nur 3 Minuten von der Autobahnabfahrt Kremmen entfernt.
+          </p>
+        </div>
+
+        <div class="step-img-box" id="map-placeholder">
+          <img src="img/map.avif" loading="lazy" class="step-img" alt="Map placeholder" />
+        </div>
+
+        <!-- SV FLATOW -->
+        <div class="step-img-box">
+          <img src="img/flatow-logo.png" loading="lazy" class="step-img enlargeable" alt="SV Rot-Weiß Flatow Logo" />
+        </div>
+
+        <div class="step-text-box">
+          <p class="step-number">Sportverein</p>
+          <h3 class="heading-tertiary">SV Rot-Weiß Flatow</h3>
+          <p class="step-description">
+            An den Spieltagen der 1. Männermannschaft heißt es: Fußballfieber pur! Alle Fans sind herzlich
+            eingeladen,<strong> an der Luke unseres Lokals</strong> vorbeizuschauen. Hier erwarten dich leckere Snacks
+            und erfrischende Getränke &mdash; perfekt, um den Spieltag in vollen Zügen zu genießen!
+          </p>
+        </div>
+
+        <!-- INHABER -->
+        <div class="step-text-box">
+          <p class="step-number">Inhaber</p>
+          <h3 class="heading-tertiary">Herzlich willkommen </h3>
+          <p class="step-description">
+            Als kleines, familiengeführtes Lokal stehen bei uns persönliche Betreuung und herzliche Gastfreundschaft an
+            erster Stelle. Wir kümmern uns mit darum, dass sich jeder Gast wie zuhause fühlt und den Aufenthalt in
+            vollen Zügen genießen kann.
+          </p>
+        </div>
+        <div class="step-img-box">
+          <img src="img/inhaber.avif" loading="lazy" class="step-img enlargeable" alt="Inhaber" />
+        </div>
+      </div>
+    </section>
+
+    <!-------------->
+    <!-- ANGEBOTE -->
+    <!-------------->
+
+    <section class="section-offers" id="offers">
+      <div class="container center-text">
+        <span class="subheading">Angebote</span>
+        <h2 class="heading-secondary">
+          Ob Geburtstagsfeiern, Hochzeiten, Seminare oder Bowlingabende...
+        </h2>
+      </div>
+
+      <div class="container grid grid--3-cols margin-bottom-md">
+
+        <!-- BOWLING -->
+        <div class="offer">
+          <img src="img/bowling-pins.jpg" loading="lazy" class="offer-img" alt="Bowling Pins" />
+          <div class="offer-content">
+            <div class="offer-tags">
+              <span class="tag tag--eat-drink">mit speis und trank</span>
+            </div>
+            <p class="offer-title">Bowling</p>
+            <ul class="offer-attributes">
+              <li class="offer-attribute">
+                <ion-icon class="offer-icon" name="bowling-ball-outline"></ion-icon>
+                <span>Auf bis zu zwei Bowlingbahnen</span>
+              </li>
+              <li class="offer-attribute">
+                <ion-icon class="offer-icon" name="accessibility-outline"></ion-icon>
+                <span>Für Kinder auch mit <strong>Bumper</strong> </span>
+              </li>
+              <li class="offer-attribute">
+                <ion-icon class="offer-icon" name="calendar-outline"></ion-icon>
+                <span>Termine nach Absprache</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- VERANSTALTUNGEN -->
+        <div class="offer">
+          <img src="img/veranstaltungsraum.avif" loading="lazy" class="offer-img" alt="Bild des Veranstaltungsraums" />
+          <div class="offer-content">
+            <div class="offer-tags">
+              <span class="tag tag--eat-drink">mit speis und trank</span>
+            </div>
+            <p class="offer-title">Veranstaltungen</p>
+            <ul class="offer-attributes">
+              <li class="offer-attribute">
+                <ion-icon class="offer-icon" name="balloon-outline"></ion-icon>
+                <span>Mit Innen- und Außenbereich</span>
+              </li>
+              <li class="offer-attribute">
+                <ion-icon class="offer-icon" name="people-outline"></ion-icon>
+                <span>Platz für bis zu 100+ Personen</span>
+              </li>
+              <li class="offer-attribute">
+                <ion-icon class="offer-icon" name="calendar-outline"></ion-icon>
+                <span>Termine nach Absprache</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FUSSBALL -->
+        <div class="offer">
+          <img src="img/sportplatz.avif" loading="lazy" class="offer-img" alt="Bild des Sportplatzes" />
+          <div class="offer-content">
+            <div class="offer-tags">
+              <span class="tag tag--eat-drink">mit speis und trank</span>
+            </div>
+            <p class="offer-title">Fußball</p>
+            <ul class="offer-attributes">
+              <li class="offer-attribute">
+                <ion-icon class="offer-icon" name="beer-outline"></ion-icon>
+                <span>Snacks und Getränke vor Ort</span>
+              </li>
+              <li class="offer-attribute">
+                <ion-icon class="offer-icon" name="football-outline"></ion-icon>
+                <span>Für Groß und Klein</span>
+              </li>
+              <li class="offer-attribute">
+                <ion-icon class="offer-icon" name="calendar-outline"></ion-icon>
+                <span>Bei Heimspielen der 1. Männermannschaft</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+    </section>
+
+    <!----------------->
+    <!-- BEWERTUNGEN -->
+    <!----------------->
+
+    <section class="section-testimonials" id="testimonials">
+      <div class="testimonials-container">
+        <span class="subheading">Bewertungen</span>
+        <h2 class="heading-secondary">Erfahrungen, die begeistern: <br> Was unsere Gäste sagen</h2>
+
+        <div class="testimonials">
+
+          <figure class="testimonial">
+            <img class="testimonial-img" alt="5 Sterne" src="img/five_stars.png" />
+            <blockquote class="testimonial-text">
+              Super Buffet, super Bedienung, einfach klasse. Ihr versteht was von eurem Job. Viel Erfolg für die
+              Zukunft!
+            </blockquote>
+            <p class="testimonial-name">&mdash; Y. K. (Google Review)</p>
+          </figure>
+
+          <figure class="testimonial">
+            <img class="testimonial-img" alt="5 Sterne" src="img/five_stars.png" />
+            <blockquote class="testimonial-text">
+              Sehr sehr lecker das Essen. Und große Portionen. Macht weiter so.
+            </blockquote>
+            <p class="testimonial-name">&mdash; S. P. (Google Review)</p>
+          </figure>
+
+          <figure class="testimonial">
+            <img class="testimonial-img" alt="Photo of customer Hannah Smith" src="img/five_stars.png" />
+            <blockquote class="testimonial-text">
+              Ausgewogenes Speisenangebot, angenehme Atmosphäre und Gastlichkeit, tolle Bedienung, faire Preise.
+            </blockquote>
+            <p class="testimonial-name">&mdash; J. B. (Google Review)</p>
+          </figure>
+
+          <figure class="testimonial">
+            <img class="testimonial-img" alt="5 Sterne" src="img/five_stars.png">
+            <blockquote class="testimonial-text">
+              Trotz geschlossener Gesellschaft hat uns der Wirt nicht hungrig weggeschickt. Wir waren nur auf der
+              Durchreise und nicht angemeldet. Vielen Dank.
+            </blockquote>
+            <p class="testimonial-name">&mdash; A. D. (Google Review)</p>
+          </figure>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-1.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-2.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-3.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-4.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-5.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-6.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-7.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-8.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-9.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-10.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-11.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/gallery/gallery-12.avif" loading="lazy" class="enlargeable" alt="Foto von wunderschön angerichtetem Essen" />
+        </figure>
+      </div>
+    </section>
+
+    <!------------->
+    <!-- KONTAKT -->
+    <!------------->
+
+    <section class="section-cta" id="cta">
+      <div class="container">
+        <div class="cta">
+          <div class="cta-text-box">
+            <h2 class="heading-secondary">Buchen Sie noch heute!</h2>
+            <p class="cta-text">
+              Haben Sie Fragen oder möchten Sie direkt Ihre Veranstaltung buchen? Kontaktieren Sie uns einfach per
+              E-Mail oder Telefon. Wir stehen Ihnen jederzeit zur Verfügung und freuen uns, Ihr Event zu einem
+              besonderen Erlebnis zu machen!
+            </p>
+
+            <form class="cta-form" name="sign-up" netlify>
+              <div>
+                <div>
+                  <label for="telephone">Telefon</label>
+                  <p class="cta-container">
+                    <ion-icon class="cta-form-icon" name="call-outline"></ion-icon> 0177 - 68 40 333
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <label for="email">E-Mail</label>
+                  <p class="cta-container">
+                    <ion-icon class="cta-form-icon" name="mail-outline"></ion-icon> gasthaus.eichenhain@gmail.com
+                  </p>
+                </div>
+              </div>
+
+              <button class="btn btn--form"
+                onclick="window.location.href='mailto:gasthaus.eichenhain@gmail.comm'">Schreiben Sie
+                uns</button>
+            </form>
+          </div>
+          <div class="cta-img-box" role="img" aria-label="Gasthaus Eichenhain"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!------------>
+  <!-- FOOTER -->
+  <!------------>
+
+  <footer class="footer">
+    <div class="container grid grid--footer">
+      <div class="logo-col">
+        <a href="#" class="footer-logo">
+          <img class="logo" alt="Gasthaus Eichenhain logo" src="img/eichenhain-logo.png" />
+        </a>
+
+        <!-- <ul class="social-links">
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a class="footer-link" href="#"
+              ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+            ></a>
+          </li>
+        </ul> -->
+
+        <p class="copyright">
+          Gasthaus Eichenhain &copy; <span class="year">2030</span>
         </p>
-    </div>
+      </div>
+
+      <div class="address-col">
+        <p class="footer-heading">Impressum</p>
+        <address class="contacts">
+          <p class="address">
+            M. Pietzofski <br>Staffelder Straße 13 A <br> 16766 Kremmen
+          </p>
+          <p>
+            <a class="footer-link" href="mailto:gasthaus.eichenhain@gmail.com">gasthaus.eichenhain@gmail.com</a>
+            <br> <span class="footer-link">0177 - 68 40 333</span>
+          </p>
+        </address>
+      </div>
+
+
+  </footer>
 </body>
 
 </html>
